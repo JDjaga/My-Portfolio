@@ -94,6 +94,70 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     });
 });
 
+// Blue neon particles background using tsParticles
+window.addEventListener('DOMContentLoaded', () => {
+  tsParticles.load("tsparticles", {
+    fullScreen: { enable: true, zIndex: -1 },
+    background: { color: "transparent" },
+    particles: {
+      number: { value: 40, density: { enable: true, value_area: 800 } },
+      color: { value: "#0ef" }, // Neon blue
+      shape: { type: "circle" },
+      opacity: {
+        value: 0.8,
+        random: true,
+        animation: { enable: true, speed: 1, minimumValue: 0.2, sync: false }
+      },
+      size: {
+        value: 6,
+        random: true,
+        animation: { enable: true, speed: 2, minimumValue: 0.8, sync: false }
+      },
+      links: {
+        enable: true,
+        distance: 180,
+        color: "#0ef", // Neon blue for links
+        opacity: 0.4,
+        width: 1.2
+      },
+      move: {
+        enable: true,
+        speed: 4,
+        direction: "none",
+        random: true,
+        straight: false,
+        outModes: { default: "bounce" },
+        attract: { enable: true, rotateX: 800, rotateY: 1500 }
+      },
+      life: {
+        duration: { sync: false, value: 20 },
+        count: 1,
+        delay: { random: { enable: true, minimumValue: 0.2 } }
+      }
+    },
+    interactivity: {
+      detectsOn: "window",
+      events: {
+        onHover: { enable: true, mode: "repulse" },
+        onClick: { enable: true, mode: "push" },
+        resize: true
+      },
+      modes: {
+        repulse: { distance: 150, duration: 0.6 },
+        push: { quantity: 2 }
+      }
+    },
+    detectRetina: true,
+    emitters: {
+      direction: "top",
+      rate: { quantity: 1, delay: 0.2 },
+      size: { width: 100, height: 10 },
+      position: { x: 50, y: 100 },
+      life: { duration: 0.2, count: 1 }
+    }
+  });
+});
+
 
 
 

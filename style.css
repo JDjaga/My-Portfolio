@@ -500,3 +500,24 @@ span {
         margin-top: 2rem;
     }
 }
+
+/* Update the tsparticles container styling */
+#tsparticles {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-color: var(--bg-color);
+}
+
+/* Ensure other sections stay above particles */
+.header {
+    position: relative;
+    z-index: 100;
+    position: relative;
+}
+
+section {
+    position: relative;
+    z-index: 1;
+}
